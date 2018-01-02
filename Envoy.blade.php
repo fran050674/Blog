@@ -2,6 +2,5 @@
 
 @task('deploy', ['on' => 'blog'])
     cd /home/admin/projects
-    git pull origin master
     composer install
 @endtask
