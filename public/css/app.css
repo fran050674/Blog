@@ -14,3 +14,23 @@ body
 {
     margin-top: 60px;
 }
+
+/*.contenedor {
+    height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 500px;
+    justify-content: bottom;
+    align-items: center;
+}*/
+.principal {
+    height: 90vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 500px 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

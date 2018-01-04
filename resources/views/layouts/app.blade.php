@@ -76,23 +76,17 @@
             </div>
         </nav>
 
-        @yield('content')
-
-        <hr>
-
-        <div class="row">
-
-            <div class="col-md-8 col-md-offset-2">
-
-                <footer>
-
-                    <p>&copy; Copyright <?php echo date('Y'); ?> Blog en construcción</p>
-
-                </footer>
-
+            @yield('content')
+            <hr>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <!-- <footer>
+                        <p>&copy; Copyright <?php echo date('Y'); ?> Blog en construcción</p>
+                    </footer> -->
+                </div>
             </div>
 
-        </div>
+
     </div>
 
     <!-- Scripts -->
