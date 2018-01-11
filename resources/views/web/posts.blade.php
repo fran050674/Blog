@@ -3,7 +3,7 @@
 @section('content')
 <div class="contaniner-fluid">
     <div  class="col-md-6 col-md-offset-3">
-        <h1>Lista de artículos</h1>
+        <h1 class="title">Lista de artículos</h1>
         <div class="principal">
 
                 @foreach ($posts as $post)
