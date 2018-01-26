@@ -6,8 +6,8 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        lista de etiquetas
-                        <a href="{{ route('tags.create') }}" class="btn btn-sm btn-primary pull-right">Crear</a>
+                        lista de mis entradas
+                        <a href="{{ route('posts.create') }}" class="btn btn-sm btn-primary pull-right">Crear</a>
                     </div>
 
                     <div class="panel-body">
@@ -20,18 +20,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($tags as $tag)
+                                @foreach ($posts as $post)
                                     <tr>
-                                        <td>{{ $tag->id }}</td>
-                                        <td>{{ $tag->name }}</td>
+                                        <td>{{ $post->id }}</td>
+                                        <td>{{ $post->name }}</td>
                                         <td width="10px">
-                                            <a href="{{ route('tags.show', $tag->id) }}" class="btn btn-sm btn-default">Ver</a>
+                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-default">Ver</a>
                                         </td>
                                         <td width="10px">
-                                            <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-sm btn-default">Editar</a>
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-default">Editar</a>
                                         </td>
                                         <td width="10px">
-                                            {!! Form::open(['route' => ['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+                                            {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
                                                 <button class="btn btn-sm btn-danger">
                                                     Eliminar
                                                 </button>
@@ -41,7 +41,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $tags->render() }}
+                        {{ $posts->render() }}
                     </div>
                 </div>
             </div>

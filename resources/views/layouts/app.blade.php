@@ -75,21 +75,51 @@
                 </div>
             </div>
         </nav>
-
-            @yield('content')
-            <hr>
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <!-- <footer>
-                        <p>&copy; Copyright <?php echo date('Y'); ?> Blog en construcción</p>
-                    </footer> -->
+        @if (session('info'))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="alert alert-success">
+                            {{ session('info') }}
+                        </div>
+                    </div>
                 </div>
             </div>
+        @endif
+
+        @if (count($errors))
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @yield('content')
+
+        <hr>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+             <!-- <footer>
+                        <p>&copy; Copyright <?php echo date('Y'); ?> Blog en construcción</p>
+                    </footer> -->
+            </div>
+        </div>
 
 
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
